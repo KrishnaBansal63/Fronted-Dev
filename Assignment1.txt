@@ -1,0 +1,113 @@
+1. Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+
+Fronted                                 Backend                                             Full-Stack
+# Focuses on everything      | Handles the server side, processing requests, | Involves both frontend and backend work, 
+in a web application.        | the frontend                                  | making the person capable of building 
+users see and interact with  | managing data, and sending information to     | entire applications end-to-end.
+                             |                                               |
+                             |                                               |
+Example: The login page of a | Example: When a user logs in, backend code    |Example: A full-stack developer creates 
+website, its colors, text    | checks credentials against the database       |both the visual login form and the server 
+fields, and animations are   |                                               |logic for verifying users and storing data
+made by frontend developers  |                                               |
+                             |                                               |
+2. Create a simple diagram showing how the client-server model works in web architecture.
+           HTTP           Query request
+ Browser---------->Server----------->Database
+         request         Data response
+
+3. Describe how a browser requests and displays a web page from a web server.
+
+#The user enters a URL or clicks a link.
+
+#The browser resolves the domain to an IP address using DNS.
+
+#It establishes a TCP connection with the server.
+
+#The browser sends an HTTP request (like GET).
+
+#The server processes this request, possibly querying a database.
+
+#The server returns content (HTML, CSS, JS, images, etc.).
+
+#The browser receives, parses, and renders the web page for the user
+
+4. Identify and list the tools required to set up a web development environment. Explain the
+purpose of each.
+
+  Tool	                                                    Purpose
+Text Editor/IDE                                            	Writing and editing code (e.g., VS Code, Sublime Text)
+Web Browser	                                                Testing and viewing web pages (e.g., Chrome, Firefox)
+Version Control (Git)	                                    Tracking changes and collaborating with others
+Package Manager	                                            Managing libraries and dependencies (e.g., npm for JS)
+Frontend Framework	                                        Streamlining UI development (e.g., React, Angular, Vue)
+Backend Framework	                                        Handling server-side logic efficiently (e.g., Django, Node.js)
+Command Line Interface	                                    Running scripts, installing packages, navigating directories
+Debugging Tools	                                            Finding and fixing errors (e.g., Chrome DevTools)
+Database	                                                Storing and managing data (e.g., MySQL, MongoDB)
+
+5. Explain what a web server is and give examples of commonly used servers.
+
+# A web server is hardware or software that delivers web content to users over the internet via HTTP or HTTPS.
+
+# Commonly used web servers include:
+
+-> Apache HTTP Server
+
+-> Nginx
+
+-> Microsoft IIS
+
+-> Lighttpd
+
+-> Node.js (as server software for JavaScript apps)
+
+6. Define the roles of a frontend developer, backend developer, and database administrator
+in a project.
+
+#Frontend Developer: Designs and codes user interfaces, ensures usability and accessibility.
+
+#Backend Developer: Works on server logic, APIs, handles databases, ensures security and performance.
+
+#Database Administrator: Manages database setup, optimization, security, and integrity; backs up data and recovers it when needed
+
+7. Install VS Code and configure it for HTML, CSS, and JavaScript development. Take a
+screenshot of the setup.
+
+#Download and install VS Code from its official website.
+
+#Add extensions: HTML, CSS, JavaScript support (e.g., Live Server, Prettier).
+
+#Open a folder/project, start coding in HTML, CSS, and JS files.
+
+#Screenshot: (Please perform setup locally and upload screenshot, as automatic screenshot generation is not possible.)
+
+8. Explain the difference between static and dynamic websites. Provide an example of
+each.
+
+Feature	                              Static Website Example	                         Dynamic Website Example
+Content	                            Remains the same unless updated	                     Changes based on user actions/data
+Technology	                        HTML, CSS (maybe some JS)	                         Server-side scripting (PHP, Node.js)
+Example	                            Personal portfolio, brochure site	                 Social media site, e-commerce site
+
+# Static Website Example: Basic portfolio site with only HTML files.
+
+# Dynamic Website Example: Facebook, which changes content based on who logs in
+
+9. Research and list five web browsers. Explain how rendering engines differ between
+them.
+
+Browser	                                  Rendering Engine	                             Notes
+Google Chrome	                             Blink	                                       Fast, widely used, also for Edge/Opera
+Mozilla Firefox	                             Gecko	                                       Focus on open standards
+Apple Safari	                             WebKit	                                       Used on all Apple devices
+Microsoft Edge	                             Blink	                                       Switched from EdgeHTML in 2020
+Opera	                                     Blink	                                       Previously used Presto, now Blink
+
+10. Draw a labeled diagram showing the basic web architecture flow — client, server,
+database, and APIs.
+
+           HTTP           Query request
+ Browser---------->Server----------->Database
+         request         Data response
