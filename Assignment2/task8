@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Example</title>
+</head>
+<body>
+    <p>Learning <mark>HTML</mark> is the first step to becoming a web developer. <small>Updated recently.</small></p>
+</body>
+</html>
