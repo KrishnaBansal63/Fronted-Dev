@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph with Line Break</title>
+</head>
+<body>
+    <p>I love reading books.<br>They help me gain new knowledge and perspectives.</p>
+</body>
+</html>
