@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Cartoon</title>
+</head>
+<body>
+    <img src="cartoon.jpg" alt="Image of my favorite cartoon– Doraemon">
+</body>
+</html>
