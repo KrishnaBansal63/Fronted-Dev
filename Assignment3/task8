@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <form method="post" action="#">
+        <label>Feedback:</label><br>
+        <textarea name="feedback" rows="4" cols="40"></textarea><br><br>
+
+        <label>Rate Us:</label><br>
+        <input type="radio" name="rating" value="Good"> Good
+        <input type="radio" name="rating" value="Average"> Average
+        <input type="radio" name="rating" value="Poor"> Poor<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
