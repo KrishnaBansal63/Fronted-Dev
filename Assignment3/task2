@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Map Embed</title>
+</head>
+<body>
+    <!-- The 'loading="lazy"' attribute delays loading until visible on screen -->
+    <iframe 
+        src="https://www.google.com/maps?q=Delhi,India&output=embed"
+        title="My City Map"
+        width="80%"
+        height="400"
+        loading="lazy">
+    </iframe>
+</body>
+</html>
