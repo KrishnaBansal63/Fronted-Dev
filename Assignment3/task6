@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+</head>
+<body>
+    <form>
+        <label>Full Name: <input type="text" name="fullname" required></label><br><br>
+        <label>Email Address: <input type="email" name="email" required></label><br><br>
+        <label>Password: <input type="password" name="password" required></label><br><br>
+        <label>Confirm Password: <input type="password" name="confirm" required></label><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
