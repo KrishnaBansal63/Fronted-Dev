@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Iframes Example</title>
+</head>
+<body>
+    <!-- First iframe: introduction -->
+    <iframe src="introduction.html" width="80%" height="200" title="Introduction"></iframe>
+    <br>
+    <!-- Second iframe: hobby -->
+    <iframe src="hobby.html" width="80%" height="200" title="Hobby"></iframe>
+</body>
+</html>
