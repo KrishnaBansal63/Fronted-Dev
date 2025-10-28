@@ -1,0 +1,81 @@
+/* Grid-based Dashboard */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--sidebar:240px;--gap:1rem;--bg:#f4f6f8;--card:#fff;--accent:#2c3e50}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#222}
+
+.grid-dashboard{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns: var(--sidebar) 1fr; /* sidebar width + main */
+  grid-template-rows: auto 1fr auto; /* header, content, footer */
+  gap:var(--gap);
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  padding:var(--gap);
+}
+
+.header{
+  grid-area:header;
+  background:linear-gradient(90deg, rgba(44,62,80,0.95), rgba(52,152,219,0.9));
+  color:#fff;
+  padding:1rem 1.25rem;
+  border-radius:8px;
+  display:flex;align-items:center;font-weight:700;font-size:1.1rem;
+}
+
+.sidebar{
+  grid-area:sidebar;
+  background:var(--card);
+  padding:1rem;
+  border-radius:8px;
+  height:calc(100vh - 2*var(--gap) - 80px); /* keeps sidebar tall */
+  overflow:auto;
+}
+
+.sidebar ul{list-style:none}
+.sidebar a{text-decoration:none;color:var(--accent);display:block;padding:0.6rem 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+
+.main{grid-area:main;padding:0}
+.main-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  grid-auto-rows: minmax(160px, auto);
+  gap:var(--gap);
+  width:100%;
+}
+
+.card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(20,20,30,0.06);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* make one card span two columns */
+.card-c{grid-column: span 2}
+
+.card:hover, .card:focus{
+  transform:scale(1.05);
+  box-shadow:0 20px 48px rgba(20,20,30,0.14);
+}
+
+.footer{grid-area:footer;text-align:center;padding:1rem;color:#666}
+
+/* Responsive: collapse to single column under 900px */
+@media (max-width:900px){
+  .grid-dashboard{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+  .sidebar{height:auto}
+  .main-grid{grid-template-columns:1fr}
+  .card-c{grid-column:auto}
+}

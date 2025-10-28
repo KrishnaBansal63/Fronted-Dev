@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flip Animation</title>
+    <style>
+        /* Base styles and reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Card Container */
+        .card-container {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        /* Card Wrapper */
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+
+        /* Flip Animation on Hover */
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        /* Common styles for both sides */
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Front Side Styling */
+        .front {
+            background: white;
+        }
+
+        .front img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .front-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .front h2 {
+            color: #2c3e50;
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        /* Back Side Styling */
+        .back {
+            background: #2c3e50;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .back h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .back p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Accessibility */
+        .card-container:focus-within {
+            outline: 3px solid #4a90e2;
+            outline-offset: 4px;
+            border-radius: 15px;
+        }
+
+        /* Animation smoothing for better performance */
+        .card {
+            will-change: transform;
+        }
+
+        /* For touch devices */
+        @media (hover: none) {
+            .card-container:active .card {
+                transform: rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container" tabindex="0">
+        <div class="card">
+            <!-- Front Side -->
+            <div class="front">
+                <img src="https://source.unsplash.com/600x400?mountain" alt="Mountain landscape">
+                <div class="front-content">
+                    <h2>Mountain Adventures</h2>
+                </div>
+            </div>
+
+            <!-- Back Side -->
+            <div class="back">
+                <h3>Discover Nature</h3>
+                <p>Embark on an unforgettable journey through pristine mountain landscapes. Experience the thrill of hiking through scenic trails, breathing in crisp mountain air, and witnessing breathtaking views at every turn. Our guided adventures ensure a safe and memorable experience for all skill levels.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

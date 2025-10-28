@@ -1,0 +1,31 @@
+/* 3-section homepage using Flexbox */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gap:1.5rem;--accent:#2c3e50;--muted:#6c6c6c}
+html,body{height:100%}
+body{font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;min-height:100vh;color:#222}
+
+/* Header */
+.site-header{background:linear-gradient(180deg, rgba(44,62,80,0.06), rgba(44,62,80,0.02));padding:1rem 0}
+.nav{display:flex;justify-content:space-around;align-items:center;gap:1rem;max-width:1100px;margin:0 auto;padding:0 1rem}
+.nav a{text-decoration:none;color:var(--accent);font-weight:700;padding:0.25rem 0.5rem}
+.nav a:focus{outline:3px solid rgba(52,152,219,0.15);outline-offset:4px}
+
+/* Main: three boxes horizontally aligned */
+.site-main{display:flex;flex:1;gap:var(--gap);max-width:1200px;margin:2rem auto;padding:0 1rem;align-items:stretch;justify-content:center;width:100%}
+.box{flex:1 1 0;min-width:220px;background:#fff;border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(30,30,30,0.06);transition:transform 0.25s ease, box-shadow 0.25s ease}
+.box h2{color:var(--accent);margin-bottom:0.5rem}
+.box p{color:var(--muted);text-align:center}
+
+/* Hover rotate effect */
+.box:hover{transform:rotate(2deg) translateY(-6px);box-shadow:0 18px 40px rgba(30,30,30,0.12)}
+.box:focus{outline:3px solid rgba(52,152,219,0.12);outline-offset:6px}
+
+/* Footer stays at bottom and spans full width */
+.site-footer{width:100%;background:rgba(44,62,80,0.95);color:#fff;text-align:center;padding:1rem 0;margin-top:auto}
+
+/* Responsive: stack vertically under 700px */
+@media (max-width:700px){
+  .nav{flex-wrap:wrap;justify-content:space-around}
+  .site-main{flex-direction:column;gap:1rem;padding:0 1rem;margin:1rem auto}
+  .box{min-width:unset;width:100%;transform:none}
+}
