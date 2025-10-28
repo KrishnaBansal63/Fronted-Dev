@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Photo Gallery</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        /* Gallery container */
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 0.5rem;
+        }
+
+        /* Image container */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 3/2;
+            cursor: pointer;
+        }
+
+        /* Image styling */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        /* Hover effect */
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Caption overlay */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover .caption {
+            transform: translateY(0);
+        }
+
+        /* Caption content */
+        .caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Adventures</h1>
+    <div class="gallery">
+        <!-- Image 1 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1544085311-11a028465b03" alt="Kyoto Temple">
+            <div class="caption">
+                <h3>Kyoto Temple</h3>
+                <p>Ancient temple surrounded by cherry blossoms in Kyoto, Japan</p>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f" alt="Venice Canals">
+            <div class="caption">
+                <h3>Venice Canals</h3>
+                <p>Scenic water canals of Venice, Italy at sunset</p>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1549144511-f099e773c147" alt="Swiss Alps">
+            <div class="caption">
+                <h3>Swiss Alps</h3>
+                <p>Majestic mountain peaks in the Swiss Alps</p>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1549877452-9c387954fbc2" alt="Santorini">
+            <div class="caption">
+                <h3>Santorini</h3>
+                <p>White-washed buildings overlooking the Aegean Sea</p>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Grand Canyon">
+            <div class="caption">
+                <h3>Grand Canyon</h3>
+                <p>Stunning views of the Grand Canyon at sunrise</p>
+            </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1558862107-d49ef2a04d72" alt="Bali Rice Terraces">
+            <div class="caption">
+                <h3>Bali Rice Terraces</h3>
+                <p>Lush green rice terraces in Ubud, Bali</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Container styles */
+        .pricing-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        /* Plan card styles */
+        .pricing-plan {
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Hover effect */
+        .pricing-plan:hover {
+            transform: translateY(-10px) scale(1.02);
+            background-color: #f8f9ff;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Popular plan highlight */
+        .popular {
+            border: 2px solid #4c7bff;
+            position: relative;
+            background-color: #fafbff;
+        }
+
+        .popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4c7bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        /* Plan header */
+        .plan-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Price section */
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Features list */
+        .features {
+            list-style: none;
+            margin: 2rem 0;
+            flex-grow: 1;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #4c7bff;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Button styles */
+        .cta-button {
+            display: block;
+            text-decoration: none;
+            background-color: #4c7bff;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3b62cc;
+        }
+
+        /* Popular plan button */
+        .popular .cta-button {
+            background-color: #2d4ea6;
+        }
+
+        .popular .cta-button:hover {
+            background-color: #1c3374;
+        }
+
+        /* Responsive design */
+        @media (max-width: 900px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .pricing-plan {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .pricing-plan:hover {
+                transform: translateY(-5px) scale(1.01);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <!-- Basic Plan -->
+        <div class="pricing-plan">
+            <div class="plan-header">
+                <h2 class="plan-name">Basic</h2>
+                <div class="price">$19<span>/month</span></div>
+            </div>     
+            <ul class="features">
+                <li>10GB Storage</li>
+                <li>10 Projects</li>
+                <li>Basic Support</li>
+                <li>Email Notifications</li>
+                <li>Simple Analytics</li>
+            </ul>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+
+        <!-- Standard Plan (Popular) -->
+        <div class="pricing-plan popular">
+            <div class="plan-header">
+                <h2 class="plan-name">Standard</h2>
+                <div class="price">$49<span>/month</span></div>
+            </div>
+            <ul class="features">
+                <li>50GB Storage</li>
+                <li>Unlimited Projects</li>
+                <li>Priority Support</li>
+                <li>Real-time Notifications</li>
+                <li>Advanced Analytics</li>
+                <li>Custom Domains</li>
+            </ul>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-plan">
+            <div class="plan-header">
+                <h2 class="plan-name">Premium</h2>
+                <div class="price">$99<span>/month</span></div>
+            </div>
+            <ul class="features">
+                <li>200GB Storage</li>
+                <li>Unlimited Projects</li>
+                <li>24/7 Premium Support</li>
+                <li>Advanced Notifications</li>
+                <li>Enterprise Analytics</li>
+                <li>Custom Domains</li>
+                <li>SLA Guarantee</li>
+            </ul>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team Members</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        /* Container for team cards */
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Team member card styling */
+        .team-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Special styling for team lead card */
+        .team-lead {
+            background-color: #f8f4ff;
+            border: 2px solid #6c63ff;
+            box-shadow: 0 6px 12px rgba(108, 99, 255, 0.2);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: block;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+        }
+
+        .team-lead .profile-image {
+            border-color: #6c63ff;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            font-size: 1.1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-lead .member-role {
+            color: #6c63ff;
+        }
+
+        .member-description {
+            text-align: center;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .team-container {
+                flex-direction: column;
+            }
+
+            .team-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    
+    <div class="team-container">
+        <div class="team-card team-lead">
+            <img src="https://randomuser.me/api/portraitswomen/1.jpg" alt="krishna" class="profile-image">
+            <h2 class="member-name">Krishna</h2>
+            <p class="member-role">Team Lead</p>
+            <p class="member-description">A seasoned developer with 10+ years of experience in web technologies. Sarah leads our team with expertise in frontend architecture and team management.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portrais/men/1.jpg" alt="raj" class="profile-image">
+            <h2 class="member-name">raj</h2>
+            <p class="member-role">Senior Developer</p>
+            <p class="member-description">Full-stack developer specializing in React and Node.js. David brings creativity and technical excellence to every project.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portits/women/2.jpg" alt="Abhijith" class="profile-image">
+            <h2 class="member-name">Abhijith</h2>
+            <p class="member-role">UX Designer</p>
+            <p class="member-description">Creative designer with a passion for user-centered design. Emma ensures our applications are both beautiful and functional.</p>
+        </div>
+    </div>
+</body>
+</html>
