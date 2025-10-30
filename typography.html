@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography and Text Styling Page</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 40px;
+      line-height: 1.7;
+      letter-spacing: 0.5px;
+      text-align: justify;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    article {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* Emphasis styles */
+    mark {
+      background-color: #ffe78f;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    strong {
+      color: #e63946;
+      font-weight: 700;
+    }
+
+    em {
+      color: #0077b6;
+      font-style: italic;
+    }
+
+    /* Pseudo-elements */
+    article::first-letter {
+      font-size: 36px;
+      font-weight: bold;
+      color: #4a90e2;
+      float: left;
+      margin-right: 6px;
+    }
+
+    article::first-line {
+      font-weight: 600;
+      color: #222;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Typography and Text Styling Showcase</h1>
+
+  <article>
+    Typography plays a vital role in creating a pleasant reading experience. It defines how text
+    <mark>looks and feels</mark> on a webpage. Choosing the right combination of <strong>font families</strong>,
+    <em>sizes</em>, and spacing can significantly improve readability and design harmony.  
+
+    Designers often use sans-serif fonts for digital displays because they are cleaner and easier to read.
+    Meanwhile, serif fonts are popular in printed materials as they add a touch of elegance and tradition.  
+
+    A good typographic layout maintains balance between <strong>contrast, alignment, and spacing</strong>.
+    Elements like <mark>line-height</mark> and <em>letter-spacing</em> help in improving the overall flow of the text,
+    ensuring that readers can enjoy content comfortably for longer periods.
+  </article>
+
+  <footer>
+    © 2025 Typography Demo | Created for CSS Practice
+  </footer>
+
+</body>
+</html>

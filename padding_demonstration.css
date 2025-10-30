@@ -1,0 +1,173 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+/* Section styles */
+.demo-section {
+    margin: 2rem 0;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+/* Box container using Flexbox */
+.box-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+/* Common box styles */
+.box {
+    background-color: white;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box-label {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Border Styles */
+.border-solid {
+    border: 3px solid #3498db;
+    padding: 20px;
+}
+
+.border-dashed {
+    border: 3px dashed #e74c3c;
+    padding: 20px;
+}
+
+.border-double {
+    border: 6px double #2ecc71;
+    padding: 20px;
+}
+
+.border-groove {
+    border: 6px groove #9b59b6;
+    padding: 20px;
+}
+
+/* Border Radius Examples */
+.radius-small {
+    border: 3px solid #f1c40f;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.radius-medium {
+    border: 3px solid #e67e22;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.radius-large {
+    border: 3px solid #16a085;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.radius-circle {
+    border: 3px solid #8e44ad;
+    border-radius: 50%;
+    padding: 20px;
+    aspect-ratio: 1;
+}
+
+/* Padding Examples */
+.padding-small {
+    border: 3px solid #3498db;
+    padding: 10px;
+}
+
+.padding-medium {
+    border: 3px solid #e74c3c;
+    padding: 20px;
+}
+
+.padding-large {
+    border: 3px solid #2ecc71;
+    padding: 40px;
+}
+
+.padding-mixed {
+    border: 3px solid #9b59b6;
+    padding: 10px 20px 30px 40px;
+}
+
+/* Hover Effects */
+.border-solid:hover {
+    border-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.border-dashed:hover {
+    border-color: #c0392b;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.border-double:hover {
+    border-color: #27ae60;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.border-groove:hover {
+    border-color: #8e44ad;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Content inside boxes */
+.content {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        gap: 3rem;
+    }
+    
+    .box {
+        width: 100%;
+        max-width: 300px;
+    }
+}

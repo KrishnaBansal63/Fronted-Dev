@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Exploration Page</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      background-color: #e0f7fa;
+      padding: 30px;
+      border: 10px solid #00796b;
+      margin: 20px;
+      width: 180px;
+      height: 120px;
+      outline: 2px dashed #004d40;
+      color: #004d40;
+      box-sizing: content-box;
+    }
+
+    .box-border {
+      box-sizing: border-box;
+      background-color: #ffe0b2;
+      padding: 30px;
+      border: 10px solid #e65100;
+      margin: 20px;
+      width: 180px;
+      height: 120px;
+      outline: 2px dashed #bf360c;
+      color: #bf360c;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      max-width: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Box Model Exploration</h1>
+
+  <div class="container">
+    <div>
+      <div class="box">Content-Box</div>
+      <p><strong>content-box:</strong> The default box model. Width and height apply only to the content. Padding and border add extra space.</p>
+    </div>
+
+    <div>
+      <div class="box-border">Border-Box</div>
+      <p><strong>border-box:</strong> The width and height include content, padding, and border. The total size stays fixed.</p>
+    </div>
+  </div>
+
+</body>
+</html>

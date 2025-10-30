@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Background Webpage</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.5em;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Fixed Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1em;
+      z-index: 1000;
+    }
+
+    /* Main sections container */
+    main {
+      margin-top: 70px; /* space for fixed header */
+      margin-bottom: 50px; /* space for footer */
+    }
+
+    /* Section 1 - Linear Gradient */
+    .linear-section {
+      height: 100vh;
+      background: linear-gradient(135deg, #2196f3, #e91e63);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    /* Section 2 - Radial Gradient with Parallax effect */
+    .radial-section {
+      height: 100vh;
+      background: radial-gradient(circle, #4caf50, #1b5e20);
+      background-attachment: fixed; /* parallax-like effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     Gradient Background Demonstration
+  </header>
+
+  <main>
+    <section class="linear-section">
+      This is a <span style="color: #fffacd;">Linear Gradient</span> Background
+    </section>
+
+    <section class="radial-section">
+      This is a <span style="color: #ffe0b2;">Radial Gradient</span> Background (with Parallax Effect)
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Gradient Demo Page | Designed by Aditya
+  </footer>
+
+</body>
+</html>

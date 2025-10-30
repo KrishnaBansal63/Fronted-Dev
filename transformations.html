@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transformations Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      background: #4a90e2;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 12px;
+      transition: all 0.4s ease;
+    }
+
+    /* Transformations */
+    .rotate:hover {
+      transform: rotate(45deg);
+      background: #007bff;
+    }
+
+    .scale:hover {
+      transform: scale(1.3);
+      background: #34c759;
+    }
+
+    .translate:hover {
+      transform: translate(20px, -20px);
+      background: #ff9500;
+    }
+
+    .skew:hover {
+      transform: skew(15deg, 10deg);
+      background: #af52de;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transformations Showcase</h1>
+
+  <div class="container">
+    <div class="box rotate">Rotate</div>
+    <div class="box scale">Scale</div>
+    <div class="box translate">Translate</div>
+    <div class="box skew">Skew</div>
+  </div>
+</body>
+</html>

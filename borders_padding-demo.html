@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borders and Padding Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .box {
+      width: 180px;
+      height: 120px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      color: #444;
+      transition: border-color 0.4s ease;
+    }
+
+    /* Border Styles */
+    .solid { border: 4px solid #007bff; }
+    .dashed { border: 4px dashed #28a745; }
+    .double { border: 6px double #ffc107; }
+    .groove { border: 6px groove #e83e8c; }
+
+    /* Rounded Corners */
+    .rounded { border-radius: 15px; }
+
+    /* Different Padding */
+    .pad-small { padding: 10px; }
+    .pad-medium { padding: 20px; }
+    .pad-large { padding: 30px; }
+
+    /* Hover Effect */
+    .box:hover {
+      border-color: #ff5722;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Borders and Padding Demonstration</h1>
+
+  <div class="container">
+    <div class="box solid pad-small">Solid Border</div>
+    <div class="box dashed pad-medium rounded">Dashed + Rounded</div>
+    <div class="box double pad-large">Double Border</div>
+    <div class="box groove pad-medium rounded">Groove + Rounded</div>
+  </div>
+
+</body>
+</html>

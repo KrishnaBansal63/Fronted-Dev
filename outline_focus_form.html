@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline and Focus Styling Form</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: 2px solid transparent;
+      outline-offset: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Outline Styles */
+    input:focus {
+      outline-color: #007bff;
+      outline-style: solid;
+      border-color: #007bff;
+      box-shadow: 0 0 6px rgba(0,123,255,0.3);
+    }
+
+    textarea:focus {
+      outline-color: #28a745;
+      outline-style: dashed;
+      border-color: #28a745;
+      box-shadow: 0 0 6px rgba(40,167,69,0.3);
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Form</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email Address">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

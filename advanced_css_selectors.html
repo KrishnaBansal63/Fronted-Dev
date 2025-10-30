@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Selectors Demo</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f3f4f6;
+      color: #333;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Attribute selectors */
+    input[type="text"] {
+      border: 2px solid #007bff;
+      padding: 8px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    a[href^="https"] {
+      color: #4caf50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a[href^="https"]:hover {
+      text-decoration: underline;
+    }
+
+    /* Pseudo-classes */
+    input:focus {
+      background: #e8f0fe;
+    }
+
+    li:hover {
+      background: #e3f2fd;
+    }
+
+    li:nth-child(2n) {
+      background: #f8f9fa;
+    }
+
+    /* Pseudo-elements */
+    h1::before { content: "✨ "; }
+    h1::after { content: " ✨"; }
+    li::before { content: "• "; color: #007bff; }
+
+    /* Combinators */
+    .list-box a { font-style: italic; }
+    .content > p { color: #555; }
+    h2 + p {
+      background: #e1f5fe;
+      padding: 8px;
+      border-left: 4px solid #2196f3;
+    }
+    h3 ~ p { color: #666; font-size: 0.95em; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced CSS Selectors Demo</h1>
+
+    <div class="list-box">
+      <h2>Example List</h2>
+      <p>This paragraph shows the adjacent sibling selector (+).</p>
+      <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+        <li>Item Four</li>
+      </ul>
+      <a href="https://example.com">Secure Link</a><br>
+      <a href="http://example.com">Normal Link</a>
+    </div>
+
+    <div class="content">
+      <h3>Combinator Example</h3>
+      <p>Direct child of .content (>)</p>
+      <p>General sibling of h3 (~)</p>
+    </div>
+
+    <div class="form">
+      <h2>Form Example</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Type here...">
+    </div>
+  </div>
+</body>
+</html>

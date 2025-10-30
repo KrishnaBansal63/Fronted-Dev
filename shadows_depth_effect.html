@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadows and Depth Effect Layout</title>
+  <style>
+    /* Reset default spacing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f2f4f7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #222;
+      font-size: 2.5em;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Container for cards */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    /* Card base style */
+    .card {
+      background-color: #fff;
+      width: 260px;
+      height: 320px;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    /* Different shadow styles */
+    .shadow-light {
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .shadow-medium {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .shadow-strong {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Hover effect - lifting up */
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Image styling */
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* Text inside card */
+    .card h2 {
+      color: #333;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Shadows and Depth Effect Layout</h1>
+
+  <div class="card-container">
+    <div class="card shadow-light">
+      <img src="https://via.placeholder.com/80" alt="Profile 1">
+      <h2>Nitin Kumar</h2>
+      <p>Creative designer focused on minimalism and visual storytelling.</p>
+    </div>
+
+    <div class="card shadow-medium">
+      <img src="https://via.placeholder.com/80" alt="Profile 2">
+      <h2>Aditya</h2>
+      <p>Full-stack developer passionate about crafting scalable web apps.</p>
+    </div>
+
+    <div class="card shadow-strong">
+      <img src="https://via.placeholder.com/80" alt="Profile 3">
+      <h2>Nikhil Singh</h2>
+      <p>UX researcher dedicated to improving digital user experiences.</p>
+    </div>
+  </div>
+
+</body>
+</html>

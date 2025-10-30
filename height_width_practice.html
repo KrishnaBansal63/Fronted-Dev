@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height and Width Practice Layout</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      overflow: hidden; /* To show overflow effect clearly */
+    }
+
+    /* Box 1 - using px */
+    .box1 {
+      width: 200px;
+      height: 150px;
+      background-color: #2196f3;
+    }
+
+    /* Box 2 - using % and vh */
+    .box2 {
+      width: 40%;
+      height: 30vh;
+      background-color: #4caf50;
+      min-height: 100px;
+      max-width: 500px;
+    }
+
+    /* Box 3 - using em */
+    .box3 {
+      width: 25em;
+      height: 10em;
+      background-color: #ff9800;
+      overflow: auto; /* Allows scrolling if text overflows */
+    }
+
+    /* Example overflowing text */
+    .box3 p {
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">200px × 150px</div>
+    <div class="box box2">40% width & 30vh height</div>
+    <div class="box box3">
+      <p>
+        This box uses <b>em</b> units for width and height.<br>
+        The <b>overflow</b> property allows scrolling if the text exceeds the box height.<br>
+        Keep adding text to test overflow... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet semper urna.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
