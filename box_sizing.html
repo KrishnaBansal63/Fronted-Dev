@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Box Sizing Comparison</title>
+<link rel="stylesheet" href="box_sizing.css">
+</head>
+<body>
+  <main>
+    <h1 style="text-align:center">Box-sizing Comparison</h1>
+    <div class="container">
+      <div class="box default-box">
+        <h3>Default box-sizing</h3>
+        <p>Padding is added outside the specified width.</p>
+      </div>
+      <div class="box borderbox" style="box-sizing:border-box">
+        <h3>border-box</h3>
+        <p>Padding is included within the specified width.</p>
+      </div>
+    </div>
+    <p class="explain">Try comparing widths and note how padding affects total size in each box. The right box uses <code>box-sizing: border-box</code>.</p>
+  </main>
+</body>
+</html>

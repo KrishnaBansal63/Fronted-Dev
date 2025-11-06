@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Selectors Practice</title>
+  <link rel="stylesheet" href="selectors_practice.css">
+</head>
+<body>
+  <div class="container">
+    <header><h1>CSS Selectors Practice</h1></header>
+    <main>
+      <section>
+        <h2>Element selector</h2>
+        <p>This paragraph is styled with the element selector <code>p</code>.</p>
+      </section>
+
+      <section>
+        <h2>Class and ID selectors</h2>
+        <p class="highlight">This uses a <code>.highlight</code> class.</p>
+        <p id="special">This uses an <code>#special</code> ID.</p>
+      </section>
+
+      <section>
+        <h2>Attribute selector</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Type here">
+        </form>
+      </section>
+
+      <section>
+        <h2>Combinators</h2>
+        <h3>Header above</h3>
+        <p>Paragraph styled by <code>h3 + p</code> (adjacent sibling).</p>
+        <div class="note">Note block</div>
+        <p>Sibling paragraph styled by <code>.note ~ p</code> (general sibling).</p>
+      </section>
+    </main>
+    <footer>Footer content</footer>
+  </div>
+</body>
+</html>

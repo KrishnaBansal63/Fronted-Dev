@@ -1,0 +1,11 @@
+/* Task 10: Mini UI */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI;background:#f0f2f5;padding:20px}
+.container{max-width:900px;margin:0 auto}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.06);margin-top:12px}
+.form-row{display:flex;gap:8px;align-items:center}
+.input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef8}
+.btn{padding:10px 14px;border-radius:8px;border:none;background:#3498db;color:#fff}
+.footer{margin-top:12px;text-align:center;color:#666}
+@media(max-width:700px){.form-row{flex-direction:column}}

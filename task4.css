@@ -1,0 +1,49 @@
+/* Element selector */
+p {
+  color: darkblue;
+}
+
+/* Class selector */
+.note {
+  background: lightyellow;
+}
+
+/* ID selector */
+#unique {
+  color: red;
+  font-weight: bold;
+}
+
+/* Attribute selector */
+a[target="_blank"] {
+  color: green;
+  text-decoration: underline;
+}
+
+/* Descendant selector */
+.box p {
+  color: purple;
+}
+
+/* Child selector */
+.box > p {
+  font-weight: bold;
+}
+
+/* Adjacent sibling selector (+) */
+.combo p + p {
+  background: lightgreen;
+}
+
+/* General sibling selector (~) */
+.combo p ~ p {
+  border-left: 3px solid green;
+  padding-left: 5px;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: gray;
+}

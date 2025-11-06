@@ -1,0 +1,78 @@
+/* --- Flexbox layout for alignment --- */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+/* --- Common styling for demo boxes --- */
+.demo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* --- Styling links --- */
+a {
+  text-decoration: none;
+  color: blue;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+a:hover {
+  background-color: lightblue;
+}
+a:active {
+  background-color: navy;
+  color: white;
+}
+a:focus {
+  outline: 2px solid orange;
+}
+
+/* --- Styling buttons --- */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: lightgreen;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: green;
+  color: white;
+}
+button:active {
+  background-color: darkgreen;
+}
+button:focus {
+  outline: 2px solid yellow;
+}
+
+/* --- List items with nth-child --- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+li:nth-child(even) {
+  background-color: #dcdcdc;
+}
+li:hover {
+  background-color: lightcoral;
+  color: white;
+}

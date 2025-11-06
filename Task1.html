@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSS Pseudo-class Examples - Task1</title>
+  <link rel="stylesheet" href="Task1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CSS Pseudo-class Examples (:hover, :focus, :active, :nth-child())</h1>
+
+    
+    <div class="row">
+      <div class="card examples">
+        <div class="demo-title">Links</div>
+        <div class="link-list">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="caption">Hover to change background; focus shows outline; active simulates press.</div>
+      </div>
+      <aside class="card explanations">
+        <p><strong>Explanation:</strong></p>
+        <p>:hover — used to change visual state when the pointer hovers over an element.</p>
+        <p>:focus — indicates element has keyboard focus (useful for accessibility).</p>
+        <p>:active — applied while the element is being activated (pressed).</p>
+      </aside>
+    </div>
+
+    <!-- Buttons Example -->
+    <div class="row">
+      <div class="card examples">
+        <div class="demo-title">Buttons</div>
+        <button class="btn">Primary</button>
+        <button class="btn">Secondary</button>
+        <div class="caption">Hover to darken; focus shows outline ring; active moves the button down slightly.</div>
+      </div>
+      <aside class="card explanations">
+        <p><strong>Explanation:</strong></p>
+        <p>Buttons commonly use :hover, :focus and :active to give tactile feedback.</p>
+        <p>Use :focus-visible to target keyboard focus specifically for better UX.</p>
+      </aside>
+    </div>
+
+    
+    <div class="row">
+      <div class="card examples">
+        <div class="demo-title">nth-child() on list items</div>
+        <ul class="nth-list">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+        <div class="caption">odd children colored differently; 2nd has unique color; every 3rd item bolded.</div>
+      </div>
+      <aside class="card explanations">
+        <p><strong>Explanation:</strong></p>
+        <p>:nth-child(an+b) selects elements based on their position. Useful for zebra striping or pattern styling.</p>
+        <p>Examples: :nth-child(odd), :nth-child(2), :nth-child(3n)</p>
+      </aside>
+    </div>
+
+  </div>
+</body>
+</html>

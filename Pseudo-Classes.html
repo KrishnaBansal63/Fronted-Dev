@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="pseudo-classes.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Pseudo-Classes Demo (:hover, :focus, :active, :nth-child())</h1>
+    <section class="row">
+      <div class="card example">
+        <h2>Links</h2>
+        <div class="demo-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="caption">Hover changes background; focus shows outline for keyboard users; active simulates press.</p>
+      </div>
+
+      <div class="card example">
+        <h2>Buttons</h2>
+        <div class="examples-inline">
+          <button class="btn">Primary</button>
+          <button class="btn">Secondary</button>
+        </div>
+        <p class="caption">Buttons use :hover, :focus and :active to provide tactile feedback.</p>
+      </div>
+
+      <div class="card example">
+        <h2>nth-child()</h2>
+        <ul class="nth-list">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+        <p class="caption">odd children colored; 2nd has unique color; every 3rd item bolded using :nth-child()</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

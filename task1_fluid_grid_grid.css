@@ -1,0 +1,6 @@
+/* Minimal CSS Grid version: 3 equal columns, responsive */
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,Segoe UI,Arial;padding:16px;background:#f7f9fc}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cell{background:#2ecc71;color:#fff;padding:24px;text-align:center;border-radius:8px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}

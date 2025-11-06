@@ -1,0 +1,22 @@
+/* Task 4: Selectors Practice
+   Demonstrates element, class, ID, attribute, combinators
+*/
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI,Arial;background:#f6f7fb;color:#222;padding:20px}
+.container{max-width:1000px;margin:0 auto}
+header,footer{padding:12px 0;text-align:center}
+section{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-bottom:12px}
+/* element selector: style all paragraphs */
+p{color:#333}
+/* class selector: .highlight */
+.highlight{background:#fff3cd;padding:6px;border-radius:4px}
+/* ID selector */n/* #special */
+#special{color:#b10f0f;font-weight:700}
+/* attribute selector: input[type="text"] */
+input[type="text"]{padding:8px;border:1px solid #ddd;border-radius:6px}
+/* child combinator: form > label */
+form > label{display:block;margin-bottom:6px;font-weight:600}
+/* adjacent sibling: h3 + p */
+h3 + p{color:#555}
+/* general sibling: .note ~ p */
+.note ~ p{font-size:0.95rem;color:#666}

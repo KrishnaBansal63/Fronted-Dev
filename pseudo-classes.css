@@ -1,0 +1,30 @@
+/* Pseudo-classes demo (Task 1)
+   Demonstrates :hover, :focus, :active, :nth-child()
+   Semantic HTML and Flexbox layout
+*/
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI, Tahoma, Arial, sans-serif;background:#f6f8fa;color:#122;line-height:1.4;padding:24px}
+.container{max-width:1100px;margin:0 auto}
+.row{display:flex;gap:16px;align-items:flex-start}
+.card{background:#fff;border-radius:8px;padding:16px;box-shadow:0 6px 18px rgba(15,15,15,0.06);flex:1}
+.example{display:flex;flex-direction:column;gap:12px}
+.examples-inline{display:flex;gap:8px;flex-wrap:wrap}
+/* Links */
+.demo-links a{color:#1f618d;text-decoration:none;padding:6px 10px;border-radius:6px}
+.demo-links a:hover{background:#1f618d;color:#fff}
+.demo-links a:focus{outline:3px solid #f39c12;outline-offset:3px}
+.demo-links a:active{transform:translateY(2px)}
+/* Buttons */
+.btn{padding:10px 14px;border-radius:6px;border:none;background:#2ecc71;color:#fff;cursor:pointer}
+.btn:hover{background:#27ae60}
+.btn:active{transform:translateY(2px)}
+.btn:focus{outline:3px solid rgba(46,204,113,0.25);outline-offset:3px}
+/* nth-child list */
+.nth-list{list-style:none;display:flex;gap:8px;padding:0}
+.nth-list li{padding:8px 12px;border-radius:6px;background:#ecf0f1}
+.nth-list li:nth-child(odd){background:#d6eaf8}
+.nth-list li:nth-child(2){background:#fdebd0}
+.nth-list li:nth-child(3n){font-weight:700}
+/* captions */
+.caption{font-size:0.9rem;color:#555}
+@media(max-width:900px){.row{flex-direction:column}.card{width:100%}}

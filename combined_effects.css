@@ -1,0 +1,10 @@
+/* Task 9: Combined Effects */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI;background:#f7f9fc;padding:24px}
+.container{max-width:1000px;margin:0 auto}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.example{flex:1;min-width:180px;padding:16px;background:#fff;border-radius:8px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform 0.25s ease,box-shadow 0.25s ease}
+.example:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.example button{padding:8px 12px;border-radius:6px;border:none;background:#3498db;color:#fff;cursor:pointer;transition:transform 0.18s ease,background 0.18s}
+.example button:hover{transform:scale(1.05);background:#2c80c9}
+.example button:active{transform:scale(0.98)}

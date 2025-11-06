@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSS Tooltips - Task2</title>
+  <link rel="stylesheet" href="tooltip.css">
+</head>
+<body>
+  <div style="display:flex;flex-direction:column;gap:1.5rem;align-items:center;justify-content:center;min-height:100vh;padding:1rem;">
+    <h2>CSS-only Tooltips (hover or focus)</h2>
+
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center;">
+      <div class="tooltip-container">
+        <button>Top Tooltip</button>
+        <div class="tooltip-text">I am a tooltip above</div>
+      </div>
+
+      <div class="tooltip-container">
+        <button>Another</button>
+        <div class="tooltip-text">Helpful info</div>
+      </div>
+
+      <div class="tooltip-container">
+        <button>Clickable</button>
+        <div class="tooltip-text">More details here</div>
+      </div>
+    </div>
+
+    <p style="max-width:700px;text-align:center;color:#333;">Tooltips are positioned absolutely inside a relatively positioned container. They fade in using <code>transition: opacity 0.3s ease-in-out</code>. They also become visible when the container is focused for keyboard users.</p>
+  </div>
+</body>
+</html>

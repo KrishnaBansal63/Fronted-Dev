@@ -1,0 +1,5 @@
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,Segoe UI,Arial;padding:16px;background:#f7f9fc}
+.row{display:flex;gap:12px}
+.box{flex:1;padding:24px;background:#3498db;color:#fff;text-align:center;border-radius:8px}
+@media(max-width:600px){.row{flex-direction:column}}
