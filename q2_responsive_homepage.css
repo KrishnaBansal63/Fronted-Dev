@@ -1,0 +1,11 @@
+/* Q2: Responsive homepage (Flexbox) */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Segoe UI,Arial;background:#f5f7fa;color:#222}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.nav a{margin-left:14px;color:#2c3e50;text-decoration:none}
+.features{display:flex;gap:12px;margin-top:18px}
+.feature{flex:1;background:#fff;padding:20px;border-radius:8px;text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.feature:hover{transform:scale(1.03);box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+footer{margin-top:18px;text-align:center;padding:12px;color:#666}
+@media(max-width:750px){.features{flex-direction:column}}

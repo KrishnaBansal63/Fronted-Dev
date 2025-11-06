@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Comparison Layout</title>
+    <link rel="stylesheet" href="q8_filter_comparison.css">
+</head>
+<body>
+    <header>
+        <h1>Image Filter Comparison</h1>
+    </header>
+
+    <main class="comparison-container">
+        <section class="image-comparison">
+            <div class="image-box original">
+                <img src="https://picsum.photos/600/400?1" alt="Original image">
+                <p class="caption">Original Image</p>
+            </div>
+
+            <div class="image-box filtered">
+                <img src="https://picsum.photos/600/400?1" alt="Filtered image">
+                <p class="caption">Filtered Image (Hover to Remove Filter)</p>
+            </div>
+        </section>
+
+        <section class="filter-info">
+            <h2>Applied Filter Effects</h2>
+            <p>The right image demonstrates the following CSS filters:</p>
+            <ul>
+                <li>Brightness: 150%</li>
+                <li>Contrast: 120%</li>
+                <li>Saturation: 150%</li>
+            </ul>
+            <p class="hint">Hover over the filtered image to see the transition effect!</p>
+        </section>
+    </main>
+</body>
+</html>

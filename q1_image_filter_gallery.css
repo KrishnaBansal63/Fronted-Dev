@@ -1,0 +1,18 @@
+/* Q1: Responsive Image Filter Gallery */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Segoe UI,Arial;background:#f7f9fc;padding:20px}
+.container{max-width:1100px;margin:0 auto}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:#fff;border-radius:8px;overflow:hidden;text-align:center}
+.card img{width:100%;height:180px;object-fit:cover;display:block;transition:filter .35s ease,transform .35s ease}
+.caption{padding:10px;background:#fff}
+/* filters */
+.card.blur img{filter:blur(3px)}
+.card.gray img{filter:grayscale(100%)}
+.card.sepia img{filter:sepia(80%)}
+.card.bright img{filter:brightness(70%)}
+.card.contrast img{filter:contrast(60%)}
+.card.hue img{filter:hue-rotate(90deg)}
+/* remove on hover */
+.card:hover img{filter:none;transform:scale(1.02)}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}}

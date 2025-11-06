@@ -1,0 +1,98 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #333;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Grid Layout */
+.cheat-sheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Topic Box Styling */
+.topic-box {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.topic-box h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Content Styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+code {
+    background: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #e74c3c;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+}
+
+p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    body {
+        padding: 1rem;
+    }
+
+    .cheat-sheet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-box {
+        padding: 1rem;
+    }
+
+    .topic-box:hover {
+        transform: none;
+    }
+
+    /* Stack heading and content vertically */
+    .content {
+        margin-top: 0.5rem;
+    }
+}
