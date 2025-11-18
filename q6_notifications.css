@@ -1,0 +1,6 @@
+/* Q6 - Notifications Dashboard styles */
+body{ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f7f8fa; }
+header{ background: #fff; }
+.alert{ border-radius:6px; }
+.card{ box-shadow: 0 6px 20px rgba(18,38,63,0.04); }
+.bg-light.border{ border:1px solid rgba(0,0,0,0.04); }

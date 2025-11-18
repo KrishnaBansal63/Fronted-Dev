@@ -1,0 +1,5 @@
+/* Q9 - Pagination styles */
+body{ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#fff; }
+.pagination .page-link{ border-radius:8px; }
+.page-item .page-link{ transition: background .15s ease, transform .12s ease; }
+.page-item .page-link:hover{ transform: translateY(-3px); }

@@ -1,0 +1,9 @@
+/* Q8 - Pricing plans styles */
+body{ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#fbfcfd; }
+.plan-card{ transition: transform .25s ease, box-shadow .25s ease; }
+.plan-card:hover{ transform: translateY(-8px); box-shadow: 0 12px 40px rgba(10,24,48,0.08); }
+.plan-pro{ background: var(--bs-primary, #0d6efd); }
+.plan-pro .card-title{ color: rgba(255,255,255,0.95); }
+.plan-pro h2{ color: white; }
+.plan-pro ul{ color: rgba(255,255,255,0.9); }
+@media(max-width:767px){ .plan-card{ text-align:center; } }

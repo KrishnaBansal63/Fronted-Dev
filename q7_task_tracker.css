@@ -1,0 +1,6 @@
+/* Q7 - Task Tracker styles */
+body{ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#fbfcfd; }
+.list-group-item{ transition: background .2s ease, transform .15s ease; }
+.list-group-item:hover{ background: #f5f7fb; transform: translateY(-2px); }
+.badge{ font-weight:600; }
+.card{ box-shadow: 0 6px 18px rgba(10,24,48,0.05); }

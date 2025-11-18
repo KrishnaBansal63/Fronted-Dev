@@ -1,0 +1,4 @@
+/* Q4 - Restaurant Menu styles */
+.table{ background:white; }
+.figure{ margin-top:1rem; }
+@media(max-width:767px){ .figure img{ max-height:220px; object-fit:cover; } }

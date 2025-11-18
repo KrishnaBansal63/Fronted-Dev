@@ -1,0 +1,10 @@
+/* Q5 - Custom theme using CSS variables */
+:root{
+  --bs-primary: #ff7f50; /* coral */
+  --bs-success: #2aa198; /* teal-ish */
+  --bs-font-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto;
+}
+body{ font-family: var(--bs-font-sans-serif); background:#fbfbfb; }
+.card{ border: none; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.btn-primary{ background: var(--bs-primary); border-color: var(--bs-primary); }
+.btn-primary:hover{ opacity:0.9; }

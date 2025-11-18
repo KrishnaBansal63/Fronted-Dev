@@ -1,0 +1,15 @@
+/* Q1 - Company Landing Page styles */
+:root{ --hero-height: 60vh; }
+body{ background:#f8f9fa; }
+/* Hero styles */
+.hero-section{
+  background: linear-gradient(90deg, rgba(52,152,219,0.06), rgba(155,89,182,0.04));
+  padding: 4rem 0;
+}
+.hero-section .display-4{ color:#1f2d3d; }
+@media(min-width:992px){
+  .hero-section{ min-height: var(--hero-height); display:flex; align-items:center; }
+}
+/* small visual tweaks */
+.navbar .nav-link{ opacity:0.95; }
+footer{ border-top:1px solid rgba(0,0,0,0.05); }

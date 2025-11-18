@@ -1,0 +1,5 @@
+/* Q3 - Product catalog styles */
+.product-card{ transition: transform .25s ease, box-shadow .25s ease; }
+.product-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.card-img-top{ object-fit:cover; height:200px; }
+@media(min-width:1200px){ .card-img-top{ height:220px; } }
