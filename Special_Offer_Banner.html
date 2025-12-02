@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q4 Banner</title>
+<style>
+  .banner { padding: 15px; background: orange; margin-bottom: 10px; }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Banners</h2>
+
+<div class="banner">Special Offer 1</div>
+<div class="banner">Special Offer 2</div>
+
+<button id="hideBtn">Hide</button>
+<button id="showBtn">Show</button>
+<button id="slideBtn">Slide</button>
+<button id="fadeBtn">Fade</button>
+
+<script>
+let visible = true;
+
+$(function(){
+
+  $("#hideBtn").click(function(){ $(".banner").hide(); });
+  $("#showBtn").click(function(){ $(".banner").show(); });
+
+  $("#slideBtn").click(function(){ $(".banner").slideToggle(); });
+
+  $("#fadeBtn").click(function(){ $(".banner").fadeToggle(); });
+
+  // Auto rotate every 5 sec
+  setInterval(function(){
+    $(".banner").fadeOut(1000).fadeIn(1000);
+  }, 5000);
+
+});
+</script>
+
+</body>
+</html>

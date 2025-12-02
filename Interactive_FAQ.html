@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q3 FAQ</title>
+<style>
+  .question { font-weight: bold; cursor: pointer; }
+  .answer { display: none; margin-bottom: 10px; }
+  input { padding: 5px; }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>FAQ</h2>
+
+<div class="faq">
+  <p class="question">What is JavaScript?</p>
+  <p class="answer">JavaScript is a scripting language.</p>
+  <input type="text" placeholder="Your feedback">
+</div>
+
+<script>
+$(function(){
+
+  // 1. Toggle on click
+  $(".question").click(function(){
+      $(this).next(".answer").toggle();
+  });
+
+  // 2. Hover color change
+  $(".question").hover(
+    function(){ $(this).css("color","blue"); },
+    function(){ $(this).css("color","black"); }
+  );
+
+  // 3. Double-click collapse all
+  $(".question").dblclick(function(){
+      $(".answer").slideUp();
+  });
+
+  // 4. Focus on input highlight parent
+  $("input").focus(function(){
+      $(this).parent().css("background","yellow");
+  });
+
+  // 5. Blur reset
+  $("input").blur(function(){
+      $(this).parent().css("background","white");
+  });
+
+});
+</script>
+
+</body>
+</html>

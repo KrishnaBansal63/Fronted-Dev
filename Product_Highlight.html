@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q2 Products</title>
+<style>
+  .product { border: 1px solid #000; padding: 10px; margin: 10px; width: 200px; }
+  .highlight { background: yellow; }
+  .selected { border: 2px solid red; }
+  .details { display: none; font-size: 14px; color: gray; }
+  .discount { border: 2px dashed green; }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Products</h2>
+
+<div class="product" data-stock="0" discount>
+  Product A  
+  <span class="fav">❤️</span>
+  <div class="details">Extra details about Product A</div>
+</div>
+
+<div class="product" data-stock="5">
+  Product B  
+  <span class="fav">❤️</span>
+  <div class="details">Extra details about Product B</div>
+</div>
+
+<script>
+$(function(){
+
+  // Attribute selector for discount products
+  $("[discount]").addClass("discount");
+
+  // 1. Click to highlight
+  $(".product").click(function(){
+      $(this).toggleClass("highlight");
+
+      if($(this).data("stock") == 0)
+          alert("This product is OUT OF STOCK!");
+  });
+
+  // 2. Hover to show details
+  $(".product").hover(
+    function(){ $(this).find(".details").show(); },
+    function(){ $(this).find(".details").hide(); }
+  );
+
+  // 3. Favorite toggle
+  $(".fav").click(function(event){
+      event.stopPropagation();
+      $(this).toggleClass("selected");
+  });
+
+});
+</script>
+
+</body>
+</html>

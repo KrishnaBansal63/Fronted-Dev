@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q1 Greeting</title>
+<style>
+  body { font-family: Arial; padding: 20px; }
+  #greeting { font-size: 24px; cursor: pointer; }
+  #welcome-msg { padding: 10px; margin-top: 10px; background: #eef; }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Welcome Page</h2>
+<div id="greeting"></div>
+<div id="welcome-msg">Welcome to our website!</div>
+
+<button id="changeQuote">Change Greeting</button>
+<button id="toggleWelcome">Toggle Welcome Message</button>
+
+<script>
+$(document).ready(function() {
+
+    // 1. Greeting based on time
+    const hour = new Date().getHours();
+    let text = "Good Evening!";
+    if(hour < 12) text = "Good Morning!";
+    else if(hour < 18) text = "Good Afternoon!";
+    $("#greeting").text(text);
+
+    // 2. Change greeting to quote
+    $("#changeQuote").click(function(){
+        $("#greeting").text("Keep pushing forward — you got this!");
+    });
+
+    // 3. Toggle welcome message
+    $("#toggleWelcome").click(function(){
+        $("#welcome-msg").toggle();
+    });
+
+    // 4. Alert on click
+    $("#greeting").click(function(){
+        alert("Greeting clicked!");
+    });
+
+});
+</script>
+
+</body>
+</html>
