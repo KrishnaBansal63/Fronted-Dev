@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7: Mouse Path & Coordinates Logger</title>
+    <style>
+        .tracker-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        #mouse-box {
+            width: 400px;
+            height: 400px;
+            border: 2px dashed #007bff;
+            margin-top: 15px;
+            position: relative; /* Essential for absolutely positioning dots */
+            overflow: hidden;
+            background-color: #e6f0ff;
+        }
+        #coordinates {
+            font-weight: bold;
+            color: #333;
+        }
+        .red-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+            pointer-events: none; /* Allows clicks to pass through to the box */
+            transform: translate(-50%, -50%); /* Center the dot on the exact click coordinate */
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker-container">
+        <h1>Mouse Coordinates Tracker</h1>
+        <p id="coordinates">
+            Mouse Position: **X: 0, Y: 0** (Move mouse inside the box)
+        </p>
+        <p>Double-click inside the box to drop a red dot.</p>
+        <div id="mouse-box">
+            </div>
+    </div>
+    <script src="question7.js"></script>
+</body>
+</html>

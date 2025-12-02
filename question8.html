@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8: Custom Dropdown</title>
+    <style>
+        .dropdown-container {
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #dropdown-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+        }
+        #dropdown-options {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: white;
+            z-index: 10;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #dropdown-options.show {
+            display: block;
+        }
+        .option-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .option-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container" id="custom-dropdown">
+        <button id="dropdown-button">Select an Option</button>
+        <ul id="dropdown-options">
+            <li class="option-item" data-value="Opt1">Option One</li>
+            <li class="option-item" data-value="Opt2">Option Two</li>
+            <li class="option-item" data-value="Opt3">Option Three</li>
+            <li class="option-item" data-value="Opt4">Option Four</li>
+        </ul>
+    </div>
+    
+    <p style="margin-top: 200px; padding: 10px; border: 1px dashed #999;">Click here to test outside click functionality.</p>
+
+    <script src="question8.js"></script>
+</body>
+</html>

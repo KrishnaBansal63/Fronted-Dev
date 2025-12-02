@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Live Character Counter</title>
+    <style>
+        .counter-container {
+            max-width: 500px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        #text-input {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        #char-counter {
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .warning-yellow {
+            color: #ffc107; /* Yellow */
+        }
+        .warning-red {
+            color: #dc3545; /* Red */
+        }
+        #reset-btn {
+            padding: 8px 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h2>Live Character Counter (Max 100)</h2>
+        <textarea id="text-input" placeholder="Start typing..."></textarea>
+        <div class="controls">
+            <span id="char-counter">100 characters remaining</span>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="question2.js"></script>
+</body>
+</html>

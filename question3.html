@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Multi-Step Form</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .form-step {
+            display: none; /* Hidden by default */
+            padding: 10px 0;
+        }
+        .form-step.active {
+            display: block; /* Show the active step */
+        }
+        .form-step label, .form-step input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .form-step input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .controls button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+        }
+        .next-btn {
+            background-color: #007bff;
+        }
+        .back-btn {
+            background-color: #6c757d;
+        }
+        .submit-btn {
+            background-color: #28a745;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            height: 1.2em;
+        }
+        .summary-box {
+            background-color: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Multi-Step Registration</h2>
+        <form id="multi-step-form">
+            
+            <div class="form-step active" data-step="1">
+                <h3>Step 1: Name</h3>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error"></div>
+                <div class="controls">
+                    <button type="button" class="next-btn" data-target-step="2">Next &rarr;</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <h3>Step 2: Email</h3>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+                <div class="controls">
+                    <button type="button" class="back-btn" data-target-step="1">&larr; Back</button>
+                    <button type="button" class="next-btn" data-target-step="3">Next &rarr;</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <h3>Step 3: Password</h3>
+                <label for="password">Password (min 6 chars):</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message" id="password-error"></div>
+                <div class="controls">
+                    <button type="button" class="back-btn" data-target-step="2">&larr; Back</button>
+                    <button type="button" class="submit-btn" data-target-step="4">Submit</button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <h3>Summary</h3>
+                <div class="summary-box">
+                    <p><strong>Name:</strong> <span id="summary-name"></span></p>
+                    <p><strong>Email:</strong> <span id="summary-email"></span></p>
+                    <p><strong>Password:</strong> ********</p>
+                </div>
+                <p style="color: #28a745; font-weight: bold; margin-top: 15px;">Form Submission Complete!</p>
+                <div class="controls">
+                    </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="question3.js"></script>
+</body>
+</html>
