@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable Viewer</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        select { padding: 10px; margin-bottom: 15px; }
+        .class { padding: 10px; border-bottom: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<h2>College Timetable Viewer</h2>
+
+<select id="day">
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+</select>
+
+<div id="list"></div>
+
+<script>
+    load();
+
+    function load() {
+        let day = document.getElementById("day").value;
+
+        fetch("http://localhost:3000/timetable?day=" + day)
+            .then(res => res.json())
+            .then(data => {
+                if (data.length === 0) {
+                    document.getElementById("list").innerHTML = "No classes today.";
+                    return;
+                }
+
+                let html = "";
+                data.forEach(c => {
+                    html += `
+                        <div class="class">
+                            <b>${c.subject}</b><br>
+                            Faculty: ${c.faculty}<br>
+                            Time: ${c.time}
+                        </div>
+                    `;
+                });
+                document.getElementById("list").innerHTML = html;
+            });
+    }
+
+    document.getElementById("day").onchange = load;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Search</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #loading { display: none; color: grey; }
+        .product { display: flex; gap: 10px; padding: 10px; border-bottom: 1px solid #ddd; }
+        .product img { width: 50px; height: 50px; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+<h2>Real-Time Live Search</h2>
+
+<input id="searchBox" type="text" placeholder="Search...">
+<div id="loading">Loading...</div>
+<div id="results"></div>
+
+<script>
+    $("#searchBox").on("input", function () {
+        let q = $(this).val().trim();
+        if (q === "") return $("#results").html("");
+
+        $("#loading").show();
+
+        $.ajax({
+            url: "http://localhost:3000/products?q=" + q,
+            method: "GET",
+            success: function (data) {
+                $("#loading").hide();
+
+                if (data.length === 0) return $("#results").html("No products found");
+
+                let html = "";
+                data.forEach(p => {
+                    html += `
+                        <div class="product">
+                            <img src="${p.image}">
+                            <div>
+                                <b>${p.name}</b><br>
+                                ₹ ${p.price}
+                            </div>
+                        </div>`;
+                });
+
+                $("#results").html(html);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .emp { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ccc; }
+        button { padding: 5px 12px; cursor: pointer; }
+        .active { background: green; color: white; }
+        #error { color: red; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>Employee Status Dashboard</h2>
+<div id="list"></div>
+<div id="error"></div>
+
+<script>
+    window.onload = load;
+
+    function load() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:3000/employees");
+
+        xhr.onload = function () {
+            let data = JSON.parse(xhr.responseText);
+            render(data);
+        };
+
+        xhr.send();
+    }
+
+    function render(data) {
+        let box = document.getElementById("list");
+        box.innerHTML = "";
+
+        data.forEach(emp => {
+            let row = document.createElement("div");
+            row.className = "emp";
+
+            let name = document.createElement("span");
+            name.textContent = emp.name;
+
+            let btn = document.createElement("button");
+            btn.textContent = emp.status;
+            if (emp.status === "active") btn.classList.add("active");
+
+            btn.onclick = function () {
+                let old = emp.status;
+                emp.status = old === "active" ? "inactive" : "active";
+
+                btn.textContent = emp.status;
+                btn.classList.toggle("active");
+
+                let up = new XMLHttpRequest();
+                up.open("PATCH", "http://localhost:3000/employees/" + emp.id);
+                up.setRequestHeader("Content-Type", "application/json");
+
+                up.onerror = function () {
+                    emp.status = old;
+                    btn.textContent = old;
+                    btn.classList.toggle("active");
+                    document.getElementById("error").textContent = "Update failed!";
+                };
+
+                up.send(JSON.stringify({ status: emp.status }));
+            };
+
+            row.appendChild(name);
+            row.appendChild(btn);
+            box.appendChild(row);
+        });
+    }
+</script>
+
+</body>
+</html>

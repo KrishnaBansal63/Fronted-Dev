@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input { display: block; padding: 8px; margin-bottom: 10px; width: 250px; }
+        button { padding: 10px 15px; }
+        #msg { margin-top: 10px; color: red; }
+    </style>
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<input id="name" type="text" placeholder="Name">
+<input id="email" type="email" placeholder="Email">
+<button onclick="register()">Register</button>
+
+<div id="msg"></div>
+
+<script>
+    function register() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+
+        axios.get("http://localhost:3000/users?email=" + email)
+            .then(res => {
+                if (res.data.length > 0) {
+                    document.getElementById("msg").textContent = "Email already registered.";
+                } else {
+                    axios.post("http://localhost:3000/users", { name, email })
+                        .then(() => document.getElementById("msg").textContent = "Registered successfully!")
+                        .catch(() => document.getElementById("msg").textContent = "Registration error.");
+                }
+            });
+    }
+</script>
+
+</body>
+</html>

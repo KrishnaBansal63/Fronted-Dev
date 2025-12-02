@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi API Dashboard</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .box { padding: 20px; margin: 10px 0; border: 1px solid #ccc; font-size: 20px; }
+        .loading { background: #eee; height: 30px; width: 150px; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: .4; } }
+        #warning { color: red; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>Multi API Dashboard</h2>
+
+<div class="box">Users: <span id="users" class="loading"></span></div>
+<div class="box">Orders: <span id="orders" class="loading"></span></div>
+<div class="box">Products: <span id="products" class="loading"></span></div>
+
+<div id="warning"></div>
+
+<script>
+    let users = fetch("http://localhost:3000/users").then(r => r.json());
+    let orders = fetch("http://localhost:3000/orders").then(r => r.json());
+    let products = fetch("http://localhost:3000/products").then(r => r.json());
+
+    Promise.all([users, orders, products])
+        .then(res => {
+            document.getElementById("users").textContent = res[0].length;
+            document.getElementById("orders").textContent = res[1].length;
+            document.getElementById("products").textContent = res[2].length;
+        })
+        .catch(() => {
+            document.getElementById("warning").textContent = "Some data could not be loaded.";
+        });
+</script>
+
+</body>
+</html>

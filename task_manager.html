@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        select { padding: 8px; margin-bottom: 15px; }
+        .task { padding: 10px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<h2>Task Manager</h2>
+
+<select id="filter">
+    <option value="">-- Sort By --</option>
+    <option value="Low">Low Priority</option>
+    <option value="Medium">Medium Priority</option>
+    <option value="High">High Priority</option>
+    <option value="Completed">Completed</option>
+</select>
+
+<div id="taskList"></div>
+
+<script>
+    loadTasks();
+
+    function loadTasks(filter = "") {
+        let url = "http://localhost:3000/tasks";
+
+        if (filter === "Completed") url += "?completed=true";
+        else if (filter) url += "?priority=" + filter;
+
+        $.ajax({
+            url,
+            method: "GET",
+            success: function (data) {
+                let html = "";
+                data.forEach(t => {
+                    html += `
+                        <div class="task">
+                            <input type="checkbox" ${t.completed ? "checked" : ""} 
+                                   onclick="toggle(${t.id}, ${t.completed})">
+                            <b>${t.title}</b> - ${t.priority}
+                        </div>`;
+                });
+                $("#taskList").html(html);
+            }
+        });
+    }
+
+    $("#filter").change(function () {
+        loadTasks($(this).val());
+    });
+
+    function toggle(id, completed) {
+        $.ajax({
+            url: "http://localhost:3000/tasks/" + id,
+            method: "PATCH",
+            data: JSON.stringify({ completed: !completed }),
+            contentType: "application/json",
+            success: () => loadTasks($("#filter").val())
+        });
+    }
+</script>
+
+</body>
+</html>
+
